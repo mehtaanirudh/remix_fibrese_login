@@ -24,6 +24,7 @@
     "remix": "^2.16.6"
   },
   "devDependencies": {
+    "@netlify/remix-adapter": "^2.6.1",
     "@remix-run/dev": "^2.16.6",
     "@types/react": "^18.2.20",
     "@types/react-dom": "^18.2.7",
