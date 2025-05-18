@@ -1,8 +1,12 @@
 import { cert, getApps, initializeApp } from "firebase-admin/app";
 import { getFirestore } from "firebase-admin/firestore";
 import type { App } from "firebase-admin/app";
+import path from "path";
+import { readFileSync } from "fs";
 
-const serviceAccount = JSON.parse(process.env.FIREBASE_CONNECT_SERVICE_ACCOUNT!);
+const serviceAccount = JSON.parse(
+  readFileSync(path.resolve("app/secrets/zkootie-connect-dev.json"), "utf8")
+);
 
 let app: App;
 
